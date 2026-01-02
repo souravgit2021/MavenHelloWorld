@@ -22,7 +22,8 @@ steps:
     goals: 'package'
 - task: CopyFiles@2
   inputs:
-    Contents: '**/.war'
+    SourceFolder: '/home/sourav/myagent/_work/1/s/webapp/target'
+    Contents: '*.war'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
